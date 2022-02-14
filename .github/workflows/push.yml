@@ -1,0 +1,11 @@
+name: "Push Checks test"
+
+on: [ push, workflow_dispatch ]
+
+jobs:
+
+  higgs-shop-sample-app:
+    name: "Check Higgs Shop Sample App"
+    uses: mParticle/mparticle-workflows/.github/workflows/android-sample-app-push.yml@67aed2d0c21c6f7d611b8acdd6c30475d8691373
+    with:
+      app_relative_path: "core-sdk-samples/higgs-shop-sample-app"
